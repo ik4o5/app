@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "684174256377",
+    "project_id": "editor-a26c6",
+    "storage_bucket": "editor-a26c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684174256377:android:e258af1d5f81f471dd9a28",
+        "android_client_info": {
+          "package_name": "Robin.Do"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684174256377-s0e3rps23sg4a9ufsnu36fps8rjdm5ua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8uYpuRRrEqSIH9kMNlVVIL3JW2E0fOZM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684174256377-s0e3rps23sg4a9ufsnu36fps8rjdm5ua.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "684174256377-7uoeildkjd0i2re9sl6kl6loas35vd98.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Robin.Do"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
