@@ -5,7 +5,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
+import '../home/home_widget.dart';
 import '../sign_in/sign_in_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -781,8 +781,7 @@ class _SignUpWidgetState extends State<SignUpWidget>
                                   await Navigator.pushAndRemoveUntil(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          NavBarPage(initialPage: 'home'),
+                                      builder: (context) => HomeWidget(),
                                     ),
                                     (r) => false,
                                   );
@@ -912,8 +911,7 @@ class _SignUpWidgetState extends State<SignUpWidget>
                                         await Navigator.pushAndRemoveUntil(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                NavBarPage(initialPage: 'home'),
+                                            builder: (context) => HomeWidget(),
                                           ),
                                           (r) => false,
                                         );

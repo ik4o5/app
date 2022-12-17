@@ -10,8 +10,6 @@ import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'index.dart';
 
 void main() async {
@@ -103,110 +101,8 @@ class _MyAppState extends State<MyApp> {
               ),
             )
           : currentUser!.loggedIn
-              ? NavBarPage()
+              ? HomeWidget()
               : SignInWidget(),
-    );
-  }
-}
-
-class NavBarPage extends StatefulWidget {
-  NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
-
-  final String? initialPage;
-  final Widget? page;
-
-  @override
-  _NavBarPageState createState() => _NavBarPageState();
-}
-
-/// This is the private State class that goes with NavBarPage.
-class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'home';
-  late Widget? _currentPage;
-
-  @override
-  void initState() {
-    super.initState();
-    _currentPageName = widget.initialPage ?? _currentPageName;
-    _currentPage = widget.page;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final tabs = {
-      'home': HomeWidget(),
-      'banlk': BanlkWidget(),
-    };
-    final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
-    return Scaffold(
-      body: _currentPage ?? tabs[_currentPageName],
-      extendBody: true,
-      bottomNavigationBar: FloatingNavbar(
-        currentIndex: currentIndex,
-        onTap: (i) => setState(() {
-          _currentPage = null;
-          _currentPageName = tabs.keys.toList()[i];
-        }),
-        backgroundColor: Color(0xFF131619),
-        selectedItemColor: Color(0x00000000),
-        unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
-        selectedBackgroundColor: FlutterFlowTheme.of(context).alternate,
-        borderRadius: 40,
-        itemBorderRadius: 40,
-        margin: EdgeInsetsDirectional.fromSTEB(12, 0, 12, 12),
-        padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
-        width: double.infinity,
-        elevation: 4,
-        items: [
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  currentIndex == 0 ? Icons.home : Icons.photo_library_outlined,
-                  color: currentIndex == 0
-                      ? Color(0x00000000)
-                      : FlutterFlowTheme.of(context).secondaryText,
-                  size: 24,
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    '12arqbs5' /* Library */,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(),
-                ),
-              ],
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.home_outlined,
-                  color: currentIndex == 1
-                      ? Color(0x00000000)
-                      : FlutterFlowTheme.of(context).secondaryText,
-                  size: 24,
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    'ipq3f85q' /* Home */,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: currentIndex == 1
-                        ? Color(0x00000000)
-                        : FlutterFlowTheme.of(context).secondaryText,
-                    fontSize: 11.0,
-                  ),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
     );
   }
 }

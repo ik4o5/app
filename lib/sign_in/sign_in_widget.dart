@@ -4,7 +4,7 @@ import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../main.dart';
+import '../home/home_widget.dart';
 import '../pass_reset/pass_reset_widget.dart';
 import '../sign_up/sign_up_widget.dart';
 import 'package:flutter/material.dart';
@@ -551,8 +551,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                   await Navigator.pushAndRemoveUntil(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          NavBarPage(initialPage: 'home'),
+                                      builder: (context) => HomeWidget(),
                                     ),
                                     (r) => false,
                                   );
@@ -615,8 +614,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                         await Navigator.pushAndRemoveUntil(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                NavBarPage(initialPage: 'home'),
+                                            builder: (context) => HomeWidget(),
                                           ),
                                           (r) => false,
                                         );
@@ -648,8 +646,7 @@ class _SignInWidgetState extends State<SignInWidget>
                                         await Navigator.pushAndRemoveUntil(
                                           context,
                                           MaterialPageRoute(
-                                            builder: (context) =>
-                                                NavBarPage(initialPage: 'home'),
+                                            builder: (context) => HomeWidget(),
                                           ),
                                           (r) => false,
                                         );

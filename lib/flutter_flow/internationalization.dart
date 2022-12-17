@@ -189,27 +189,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'ar': '',
     },
   },
-  // imagepage
+  // Image
   {
-    'k5py9sfc': {
-      'en': 'Library',
-      'ar': '',
-    },
-  },
-  // results
-  {
-    'heztks24': {
-      'en': 'Home',
-      'ar': '',
-    },
-  },
-  // banlk
-  {
-    '4sg681pt': {
-      'en': 'Page Title',
-      'ar': '',
-    },
-    'ipq3f85q': {
+    'tlxav4o5': {
       'en': 'Home',
       'ar': '',
     },

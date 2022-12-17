@@ -47,12 +47,21 @@ class FFAppState extends ChangeNotifier {
     secureStorage.setStringList('ff_library', _library);
   }
 
-  String _croppedPictureURI = '';
+  String _croppedPictureURI =
+      'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZHViYWl8ZW58MHx8MHx8&w=1000&q=80';
   String get croppedPictureURI => _croppedPictureURI;
   set croppedPictureURI(String _value) {
     notifyListeners();
 
     _croppedPictureURI = _value;
+  }
+
+  String _selectPhoto = '';
+  String get selectPhoto => _selectPhoto;
+  set selectPhoto(String _value) {
+    notifyListeners();
+
+    _selectPhoto = _value;
   }
 }
 

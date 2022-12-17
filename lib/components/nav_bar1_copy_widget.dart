@@ -1,8 +1,7 @@
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
-import '../imagepage/imagepage_widget.dart';
-import '../main.dart';
+import '../home/home_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -93,7 +92,7 @@ class _NavBar1CopyWidgetState extends State<NavBar1CopyWidget> {
                   await Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NavBarPage(initialPage: 'home'),
+                      builder: (context) => HomeWidget(),
                     ),
                   );
                 },
@@ -112,7 +111,7 @@ class _NavBar1CopyWidgetState extends State<NavBar1CopyWidget> {
                   await Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ImagepageWidget(),
+                      builder: (context) => HomeWidget(),
                     ),
                   );
                 },

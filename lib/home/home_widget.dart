@@ -47,11 +47,30 @@ class _HomeWidgetState extends State<HomeWidget> {
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
           ),
-          child: Row(
+          child: Column(
             mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [],
+            children: [
+              Expanded(
+                child: GridView(
+                  padding: EdgeInsets.zero,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 1,
+                  ),
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    Image.network(
+                      'https://picsum.photos/seed/647/600',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
